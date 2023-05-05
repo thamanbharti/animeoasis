@@ -1,0 +1,50 @@
+.box{
+    width: 25vw;
+    height: 35vh;
+    border: solid;
+    margin-left: 2cm;
+    margin-top: .5cm;
+    border-width: thin;
+    display: inline-flex;
+}
+
+.add-box{
+    margin-top: 24vh;
+   
+    bottom: 1%;
+    border: solid;
+    border-width: thin;
+    height: 5vh;
+    width: 22vw;
+    text-align: center;
+    font-weight: 700;
+    margin-right:14% ;
+    /* transition: background-color .25s; */
+    display: none;
+}
+
+.box:hover{
+    transform: scale(1.12);
+
+}
+
+.box:hover .add-box{
+    display: block;
+    
+    
+}
+
+.save-box{
+    height: 4vh;
+    width: 5vw;
+    background-color: rgba(43, 226, 83, 0.658) ;
+    margin-left: 1%;
+    margin-top: 2%;
+    text-align: center;
+}
+.add-box:hover{
+    background-color: rgba(43, 226, 83, 0.658);
+    cursor: pointer;
+
+}
+

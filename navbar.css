@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.webname {
+    text-align: center;
+    font-family: cursive;
+    background-color: blueviolet;
+    height: 1.2cm;
+}
+
+ h1{
+    color: white;
+    
+}
+
+.webname h21{
+    font-weight: lighter;
+    font-family: cursive;
+}
+.navbar{
+    font-weight: 600;
+}
+.navbar ul{
+    display: inline-flex;
+    list-style: none;
+}
+
+.navbar ul li{
+    width: 100px;
+    margin: 15px;
+    padding: 15px;
+   
+ height: .5cm;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.active,.navbar ul li:hover{
+    border-radius: 3px;
+    background-color: blueviolet;
+}
+
+.sub-menu-1{
+    display: none;
+}
+
+.navbar ul li:hover .sub-menu-1{
+    display: block;
+   
+    position: absolute;
+    background-color: rgb(137, 43, 226);
+    margin-top: 15px;
+  
+}
+
+.navbar ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding:10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius:0;
+    text-align: left;
+}
+
+.sub-menu-1 ul li:hover{
+    background-color: rgba(137, 43, 226, 0.747);
+}
+.navbar ul li:hover .sub-menu-1 ul{
+   display: block;
+   margin: 10px;
+}
+
+.navbar ul li:hover .sub-menu-1,ul li:last-child{
+      display: block;
+      margin: 10px;
+    
+}
+
+.sub-menu-2{
+    display: none;
+}
+
+.navbar ul li:hover .sub-menu-2{
+    display: block;
+   
+    position: absolute;
+    background-color: rgb(137, 43, 226);
+    margin-top: 15px;
+  
+}
+
+.navbar ul li:hover .sub-menu-2 ul li{
+    width: 150px;
+    padding:10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius:0;
+    text-align: left;
+}
+
+.sub-menu-2 ul li:hover{
+    background-color: rgba(137, 43, 226, 0.747);
+}
+.navbar ul li:hover .sub-menu-2 ul{
+   display: block;
+   margin: 10px;
+}
+
+.navbar ul li:hover .sub-menu-2,ul li:last-child{
+      display: block;
+      margin: 10px;
+    
+}
+
+.login-nav:hover{
+    cursor: pointer;
+}

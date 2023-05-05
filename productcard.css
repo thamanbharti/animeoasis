@@ -1,0 +1,28 @@
+.product-box{
+    height: 35vh;
+    width: 25vw;
+    border: solid;
+    text-align: center;
+    display: inline-flex;
+    margin-left: 2cm;
+    border-width: thin;
+}
+.product-box1{
+    height: 35vh;
+    width: 25vw;
+    border: solid;
+    text-align: center;
+    display: inline-flex;
+    margin-left: 2cm;
+    margin-top: .5cm;
+    border-width: thin;
+}
+
+.product-box:hover{
+    transform: scale(1.15);
+
+}
+.product-box1:hover{
+    transform: scale(1.15);
+
+}
