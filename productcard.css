@@ -1,3 +1,8 @@
+body{
+    background-color: rgb(117, 115, 115);
+    
+}
+
 .product-box{
     height: 35vh;
     width: 25vw;
@@ -6,6 +11,10 @@
     display: inline-flex;
     margin-left: 2cm;
     border-width: thin;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-image: url('https://cdnb.artstation.com/p/assets/images/images/039/881/373/large/paradoxicalbean-mockap-kimetsu-blanca-trasera.jpg?1627232005');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .product-box1{
     height: 35vh;
@@ -16,13 +25,74 @@
     margin-left: 2cm;
     margin-top: .5cm;
     border-width: thin;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    background-image: url('https://i5.walmartimages.com/asr/70f1aa2c-6020-446f-ac5f-7fed81cd20c2.412c183fbb0609f4f24eb6668df987d8.jpeg?odnHeight=320&odnWidth=320&odnBg=FFFFFF');
+}
+.product-box2{
+    height: 35vh;
+    width: 25vw;
+    border: solid;
+    text-align: center;
+    display: inline-flex;
+    margin-left: 2cm;
+    margin-top: .5cm;
+    border-width: thin;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/a5f563108424871.Y3JvcCwyNzYxLDIxNjAsNTQwLDA.png');
+}
+.product-box3{
+    height: 35vh;
+    width: 25vw;
+    border: solid;
+    text-align: center;
+    display: inline-flex;
+    margin-left: 2cm;
+    margin-top: .5cm;
+    border-width: thin;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-image: url('https://www.printninja.com/wp-content/uploads/2019/03/manga-tankoubon-graphic-novel.jpg');
+}
+.product-box4{
+    height: 35vh;
+    width: 25vw;
+    border: solid;
+    text-align: center;
+    display: inline-flex;
+    margin-left: 2cm;
+    margin-top: .5cm;
+    border-width: thin;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-image: url('https://graphicburger.com/wp-content/uploads/2014/01/Sketchbook-MockUp-300.jpg');
+}
+.product-box5{
+    height: 35vh;
+    width: 25vw;
+    border: solid;
+    text-align: center;
+    display: inline-flex;
+    margin-left: 2cm;
+    margin-top: .5cm;
+    border-width: thin;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-image: url('https://i.etsystatic.com/36861249/r/il/03c7ed/4190677549/il_fullxfull.4190677549_rq2k.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 
-.product-box:hover{
-    transform: scale(1.15);
-
+.Logout{
+    border: none;
+    text-align: center;
+    margin-left: 50%;
+    height: 6vh;
+    width: 6vw;
+    border-radius: 4%;
+    background-color: rgb(247, 247, 247);
+    font-family: cursive;
+    padding: 0.01%;
+    font-size: large;
 }
-.product-box1:hover{
-    transform: scale(1.15);
-
+.logout-section :hover{
+    background-color: rgb(220, 226, 230);
+    cursor:pointer;
 }

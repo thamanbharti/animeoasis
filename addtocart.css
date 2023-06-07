@@ -1,8 +1,40 @@
-.cart-div{
-    float: right;
-    margin-right: 3%;
-    background-color: blueviolet;
-    height: 10vh;
-
+h1{
+  text-align: center;
+}
+li{
+    list-style: none;
 }
 
+
+.products{
+    width: 70vh;
+    
+    
+}
+.total-section{
+    width: 50vh;
+    float: right;
+    margin-right: 2%;
+}
+
+.increment  ,.decrement{
+    font-size: larger;
+    width: 20%;
+    border-radius: 2%;
+    height: 108%;
+}
+
+/* .remove{
+    font-size: 110%;
+    border-radius: 5%;
+    
+    border: none;
+    background-color: rgb(237, 182, 100);
+    font-family: cursive;
+} */
+.quantity{
+    float: right;
+   margin-right: 5%;
+    margin-top: -10%;
+   
+}

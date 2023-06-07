@@ -5,7 +5,7 @@
 .webname {
     text-align: center;
     font-family: cursive;
-    background-color: blueviolet;
+    background-color: black;
     height: 1.2cm;
 }
 
@@ -41,7 +41,7 @@
 
 .active,.navbar ul li:hover{
     border-radius: 3px;
-    background-color: blueviolet;
+    background-color: rgb(252, 252, 252);
 }
 
 .sub-menu-1{
@@ -52,7 +52,7 @@
     display: block;
    
     position: absolute;
-    background-color: rgb(137, 43, 226);
+    background-color: rgb(254, 253, 255);
     margin-top: 15px;
   
 }
@@ -67,7 +67,7 @@
 }
 
 .sub-menu-1 ul li:hover{
-    background-color: rgba(137, 43, 226, 0.747);
+    background-color: rgb(254, 253, 255);
 }
 .navbar ul li:hover .sub-menu-1 ul{
    display: block;
@@ -88,7 +88,7 @@
     display: block;
    
     position: absolute;
-    background-color: rgb(137, 43, 226);
+    background-color: rgb(247, 247, 247);
     margin-top: 15px;
   
 }
@@ -118,4 +118,12 @@
 
 .login-nav:hover{
     cursor: pointer;
+}
+
+.crnt-num{
+   
+    color:red;
+    font-size: larger;
+   
+    border-radius: 100%;
 }

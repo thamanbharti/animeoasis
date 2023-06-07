@@ -1,8 +1,9 @@
 .footer{
     height: 42vh;
     width: 100%;
-    background-color: blueviolet;
+    background-color: black;
     margin-top: 0.5cm;
+    color: white;
 }
 
 .contact-us{
@@ -30,6 +31,9 @@
     text-align: left;
     margin-left: 10%;
     margin-top: 2%;
+    font-size: large;
+    font-weight: 500;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .require-payment ul li{
@@ -37,6 +41,9 @@
     text-align: left;
     margin-left: 10%;
     margin-top: 2%;
+    font-size: large;
+    font-weight: 500;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .payment{

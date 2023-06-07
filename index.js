@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Productex from './productex';
 import ADDTOCART from './addtocart';
+import Register from './register';
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
     path: "/addtocart",
     element: <ADDTOCART/>,
   },
+  {
+    path: "/register",
+    element:< Register/>
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

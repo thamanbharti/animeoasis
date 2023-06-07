@@ -5,11 +5,13 @@ import {IoLogIn  } from "react-icons/io5";
 import './navbar.css'
 import './login'
 
-function Navbar({handleloginClick}){
+function Navbar({handleloginClick,number}){
     
      const handleClick=()=>{
       handleloginClick()
      }
+
+
     return(
         
         <>
@@ -20,7 +22,7 @@ function Navbar({handleloginClick}){
           <li><a href='#'>Shop All</a><div className='sub-menu-2'><ul><li>shop 1</li>
           <li>shop 2</li><li>shop 3</li><li>shop 4</li><li>shop 5</li><li>shop 6</li><li>shop 7</li></ul></div></li>
           
-          <div className='logo-sec'><ul><li ><Link to="./addtocart"><BsCartFill size={21}/>1</Link></li>
+          <div className='logo-sec'><ul><li ><Link to="./addtocart"><BsCartFill size={21}/><span className='crnt-num'>{number}</span></Link></li>
           <li className='login-nav' onClick={handleClick}>login<IoLogIn size={25}/></li></ul></div>
           </ul>
         </div>

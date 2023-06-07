@@ -49,6 +49,7 @@
     margin-left: 2%;
     margin-top: 1%;
 }
+
 .cancel,.login:hover{
     cursor: pointer;
 }
