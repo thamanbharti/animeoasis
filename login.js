@@ -6,7 +6,8 @@ import Register from "./register";
 import { useState } from "react";
 import axios from "axios";
 
-const Login=({isShowlogin})=>
+
+const Login=({isShowlogin},{setLoginUser})=>
 {
     const [user,setUser]=useState({
        
@@ -26,9 +27,18 @@ const Login=({isShowlogin})=>
         console.log(name,value)
     }
     
-    const login=()=>{
-        axios.post("http://localhost:9002/login",user)
-        .then(res=>alert(res.data.message))
+    // const login=()=>{
+    //     axios.post("http://localhost:9002/login",user)
+    //     .then(res=>alert(res.data.message))
+    // }
+
+    const login = () => {
+        axios.post("http://localhost:9002/login", user)
+        .then(res => {
+            alert(res.data.message)
+            setLoginUser(res.data.user)
+
+        })
     }
     return(
         <>

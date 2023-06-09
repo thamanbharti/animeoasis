@@ -1,25 +1,10 @@
-.box1{
-    width: 20vw;
-    height: 50vh;
-    border: solid;
-    margin-left: 3cm;
-    margin-top: .5cm;
-    border-width: thin;
-    display: inline-flex;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.box1 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: rgba(255, 255, 255, 0.664);
-    cursor: pointer;
-    width: 100%;
-}
 
 .list{
     list-style: none;
+    width: 140vh;
+     border: solid;
+    border-radius: 1%;
+    border-width: thin;
 }
 
 .btn{
@@ -30,10 +15,12 @@
     font-size: larger;
     font-size: 200%;
     font-family: cursive;
+    width: 70vh;
+   
 }
 
 .price{
-    margin-left: 50%;
+    
     font-family: cursive;
     height: 1cm;
     width: 5cm;

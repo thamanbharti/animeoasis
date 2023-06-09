@@ -2,6 +2,7 @@ import React from 'react'
 import "./register.css"
 import { useState } from 'react'
 import axios from 'axios'   //axios-helps to call api
+
 const Register = () => {
 const [user,setUser]=useState({
     name:"",
@@ -12,14 +13,14 @@ const [user,setUser]=useState({
 })
 const register=()=>{
   const {name,email,passwrd,reEnterpasswrd}=user
-   if(name&&email&&passwrd&&passwrd===reEnterpasswrd)
+   if(name&&email&&passwrd&&(passwrd===reEnterpasswrd))
    { 
     
-    axios.post("http://localhost:9002/register",user)
+    axios.post("http://localhost:8000/register",user)
     .then(res=>console.log(res))
    }
    else{
-    alert("kya kar rha hai bhai")
+    alert("invalid information or invalid input")
    }
  
 }
@@ -49,7 +50,7 @@ const handleChange=(e)=>{
     <input type="password" name='reEnterpasswrd' value={user.reEnterpasswrd}placeholder="Confirm your password" onChange={handleChange} className="pwd"/>
     <div className="fgt-pwd"></div>
     <div className="login" onClick={register}><b>Signup</b></div><h3 className='or'>or</h3>
-    <div className='login'><b>SignIn</b></div>
+       <div className='login'><b>SignIn</b></div>
     </div>
    
   )

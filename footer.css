@@ -1,5 +1,5 @@
 .footer{
-    height: 42vh;
+    height: max-content;
     width: 100%;
     background-color: black;
     margin-top: 0.5cm;

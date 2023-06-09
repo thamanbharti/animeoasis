@@ -84,13 +84,16 @@ body{
     border: none;
     text-align: center;
     margin-left: 50%;
-    height: 6vh;
+    height: max-content;
     width: 6vw;
     border-radius: 4%;
     background-color: rgb(247, 247, 247);
     font-family: cursive;
     padding: 0.01%;
     font-size: large;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    overflow: hidden;
 }
 .logout-section :hover{
     background-color: rgb(220, 226, 230);

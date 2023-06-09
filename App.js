@@ -20,13 +20,17 @@ function App({number}) {
   return (
    <> 
    <div className='App'>
+   <Navbar handleloginClick={handleloginClick} number={number}/>
+   {/* <Login isShowlogin={isShowlogin}/> */}
+      {isShowlogin?(<Login/>):(<>
+        <Product/>
+        <Footer/> 
+</>)}
+      
     
-      <Navbar handleloginClick={handleloginClick} number={number}/>
-      <Login isShowlogin={isShowlogin}/>
-      <Product/>
   
-      {/* <Productex/> */}
-      <Footer/>
+      
+      
       
       
     </div>
