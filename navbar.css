@@ -127,3 +127,6 @@
    
     border-radius: 100%;
 }
+.cartbtn:hover{
+    cursor: pointer;
+}

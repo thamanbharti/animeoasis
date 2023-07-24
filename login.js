@@ -1,7 +1,7 @@
 import React  from "react";
 import './login.css';
 import './App.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Register from "./register";
 import { useState } from "react";
 import axios from "axios";
@@ -9,6 +9,8 @@ import axios from "axios";
 
 const Login=({isShowlogin},{setLoginUser})=>
 {
+    const Navigate=useNavigate()
+    const [show,Display]=useState(isShowlogin)
     const [user,setUser]=useState({
        
         email:"",
@@ -27,23 +29,21 @@ const Login=({isShowlogin},{setLoginUser})=>
         console.log(name,value)
     }
     
-    // const login=()=>{
-    //     axios.post("http://localhost:9002/login",user)
-    //     .then(res=>alert(res.data.message))
-    // }
+   
 
     const login = () => {
-        axios.post("http://localhost:9002/login", user)
+        axios.post("http://localhost:3001/login", user)
         .then(res => {
             alert(res.data.message)
-            setLoginUser(res.data.user)
-
+            setUser(res.data.user)
+            Display(!show)
+            Navigate(-1)
         })
     }
     return(
         <>
         
-      <div className={`${!isShowlogin ? "active": "show"}`}>
+      
          {console.log("user",user)}
           <div className="container-right"><div className="profile"><b >Sign In</b></div>
           <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -57,7 +57,7 @@ const Login=({isShowlogin},{setLoginUser})=>
           <div className="login" onClick={login}><b>Login</b></div>
           </div>
          
-          </div>
+          
           
         </>
     )

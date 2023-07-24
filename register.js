@@ -2,8 +2,10 @@ import React from 'react'
 import "./register.css"
 import { useState } from 'react'
 import axios from 'axios'   //axios-helps to call api
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
+const Navigate=useNavigate();
 const [user,setUser]=useState({
     name:"",
     email:"",
@@ -16,8 +18,9 @@ const register=()=>{
    if(name&&email&&passwrd&&(passwrd===reEnterpasswrd))
    { 
     
-    axios.post("http://localhost:8000/register",user)
+    axios.post("http://localhost:3001/register",user)
     .then(res=>console.log(res))
+     Navigate(-1)
    }
    else{
     alert("invalid information or invalid input")

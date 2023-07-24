@@ -1,30 +1,58 @@
-
-
-/* .remove{
-    font-size: 110%;
-    border-radius: 5%;
-    
-    border: none;
-    background-color: rgb(237, 182, 100);
-    font-family: cursive;
-} */
-.quantity{
-    float: right;
-   margin-right: 5%;
-    margin-top: 10vh;
-   
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Set the gap between the boxes */
+  justify-content: flex-start; /* Adjust as needed (e.g., center, space-between) */
 }
 
-.product-container {
-    position: relative;
-  }
-  
-  .add-to-cart-container {
-    position: absolute;
-    top: 23vh;
-    right: 20px;
-    border: solid;
-    border-radius: 2%;
-    border-width: thin;
-    width: 32%;
-  }
+.box {
+  /* Add styling for each box here */
+  width: 200px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column; /* Display child elements in a column */
+  align-items: center; /* Center the child elements horizontally */
+  padding: 10px;
+  translate: 10px 5px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 16px;
+  color: white; /* Add a color for the price or adjust as needed */
+  margin-bottom: 5px;
+  background-color: black;
+  text-align: center;
+}
+
+.image {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.payment-btn{
+ margin-left: 45%;
+ height: 6vh;
+ width: 10vw;
+ text-overflow: ellipsis;
+ margin-top: 2%;
+}
+.payment-btn:hover{
+  cursor: pointer;
+}
+
+.total-section {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background-color: #f0f0f0;
+}

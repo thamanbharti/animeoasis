@@ -14,18 +14,14 @@ function App({number}) {
   
   const [user,setLoginUser]=useState({})
   const [isShowlogin,setIsShowlogin]=useState(true)
-  const handleloginClick=()=>{
-    setIsShowlogin((isShowlogin)=>!isShowlogin)
-  }
+  
   return (
    <> 
    <div className='App'>
-   <Navbar handleloginClick={handleloginClick} number={number}/>
-   {/* <Login isShowlogin={isShowlogin}/> */}
-      {isShowlogin?(<Login/>):(<>
-        <Product/>
-        <Footer/> 
-</>)}
+   <Navbar  number={number}/>
+   <Product/>
+   <Footer/> 
+
       
     
   

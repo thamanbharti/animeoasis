@@ -14,7 +14,7 @@ function Product(setLoginUser)
         <div className='product-box4'><h3>&nbsp;&nbsp;&nbsp;&nbsp;sketchbook<br /></h3></div>
         <div className='product-box5'><h3>&nbsp;&nbsp;&nbsp;&nbsp;shoes</h3></div>
         
-       <br /> <br /> <br /> <div className='logout-section' onClick={()=>setLoginUser}><button className='Logout'><RiLogoutBoxFill size={21}/>logout</button></div>
+       <br /> <br /> <br /> <Link to='/login'><div className='logout-section' onClick={()=>setLoginUser}><button className='Logout'><RiLogoutBoxFill size={21}/>logout</button></div></Link>
 
         </>
 

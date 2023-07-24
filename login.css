@@ -25,14 +25,13 @@
     border: solid;
     float: right;
     border-width: thin;
-    margin-right: 25%;
+    translate: 25% ;
     background-image: url('https://c4.wallpaperflare.com/wallpaper/127/164/7/kid-luffy-monkey-d-luffy-one-piece-anime-hd-wallpaper-preview.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
     color: white;
     margin-top: 8vh;
-   
 }
 
 .profile{
