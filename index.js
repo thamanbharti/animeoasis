@@ -8,7 +8,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Productex from './productex';
+import Productitem from './productitem';
 import ADDTOCART from './addtocart';
 import Register from './register';
 import Product from './productcard';
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
-    path: "/productex",
-    element: <Productex/>,
+    path: "/productitem",
+    element: <Productitem/>,
   },
   {
     path: "/addtocart",
