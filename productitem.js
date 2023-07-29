@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Login from './login';
 import Footer from './footer';
@@ -16,10 +16,12 @@ function Productitem() {
   const [isButtonPressed, setIsButtonPressed] = useState({});
   const [animename, animenameSet] = useState('Naruto');
   const [showLoginPopup, setShowLoginPopup] = useState(false);
+  
+
 
   const history = useNavigate();
   
-  
+
   
   const handleClick = () => {
     setShowLoginPopup(true);
@@ -30,13 +32,22 @@ function Productitem() {
   }
 
   const setmyBasket = (product) => {
-    addtocart((prevBasket) => [...prevBasket, product]);
-    setNum((prevNumber) => prevNumber + 1);
+    addtocart((prevBasket) => [...prevBasket, product])
+    setNum(number+1)
     setIsButtonPressed((prevstateofbtn) => ({
       ...prevstateofbtn,
       [product.id]: true,
     }));
   };
+
+  useEffect(() => {
+    const cartCount = localStorage.getItem('number');
+    if (cartCount) {
+      setNum(parseInt(cartCount));
+    }
+  }, []);
+  
+  
 
   const addToBasketAndPost = (product) => {
     setmyBasket(product);
@@ -54,6 +65,8 @@ function Productitem() {
         console.error('Error:', error.message);
       });
   };
+
+  
 
   const Productdata = ({ id, name, price, image }) => {
     const isProductButtonPressed = isButtonPressed[id];

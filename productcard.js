@@ -7,7 +7,7 @@ function Product(setLoginUser)
 {
     return(
         <>
-       <Link to="./productex"> <div className='product-box' ><h3>&nbsp;&nbsp;&nbsp;&nbsp;T-shirt</h3></div></Link>
+       <Link to="./productitem"> <div className='product-box' ><h3>&nbsp;&nbsp;&nbsp;&nbsp;T-shirt</h3></div></Link>
         <div className='product-box1'><h3>&nbsp;&nbsp;&nbsp;&nbsp;Home hardware</h3></div>
         <div className='product-box2'><h3>&nbsp;&nbsp;&nbsp;&nbsp;Accessories</h3></div> 
         <div className='product-box3'><h3>&nbsp;&nbsp;&nbsp;&nbsp;comics<br /></h3></div> 

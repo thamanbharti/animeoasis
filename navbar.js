@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { BsCartFill } from "react-icons/bs";
 import { IoLogIn } from "react-icons/io5";
@@ -7,9 +7,10 @@ import './navbar.css';
 import './login';
 import Login from './login';
 
-function Navbar({ number }) {
-  const Navigate = useNavigate();
 
+function Navbar() {
+  const Navigate = useNavigate();
+   const [animename,animenameSet]=useState('');
   
   const [showLoginPopup, setShowLoginPopup] = React.useState(false);
 
@@ -22,23 +23,25 @@ function Navbar({ number }) {
     
     setShowLoginPopup(false);
   }
-
+ 
+  let number = parseInt(localStorage.getItem('number'));
+   console.log(number)
   return (
     <>
+   
       <div className='webname'><h1> Anime<h21>-oasis</h21> </h1></div>
       <div className='navbar'>
         <ul>
-          <li className='active'><a href='#'>Home</a></li>
+          <li className='active' onClick={()=>{Navigate('/')}}><a href='#'>Home</a></li>
           <li><a href='#'>Anime</a>
             <div className='sub-menu-1'>
               <ul>
-                <li>Anime 1</li>
-                <li>Anime 2</li>
-                <li>Anime 3</li>
-                <li>Anime 4</li>
-                <li>Anime 5</li>
-                <li>Anime 6</li>
-                <li>Anime 7</li>
+                <li onClick={()=>{animenameSet('Naruto')}}>Naruto</li>
+                <li onClick={()=>{animenameSet('One-piece')}}>One-piece</li>
+                <li onClick={()=>{animenameSet('jutsu-kaisen')}}>jutsu-kaisen</li>
+                <li onClick={()=>{animenameSet('onepunch man')}}>onepunch man</li>
+                <li onClick={()=>{animenameSet('Demon-slayer')}}>Demon-slayer</li>
+                
               </ul>
             </div>
           </li>

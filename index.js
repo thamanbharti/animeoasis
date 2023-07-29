@@ -12,6 +12,7 @@ import Productitem from './productitem';
 import ADDTOCART from './addtocart';
 import Register from './register';
 import Product from './productcard';
+import Empty from './empty';
 
 const router = createBrowserRouter([
   {
@@ -35,12 +36,16 @@ const router = createBrowserRouter([
     element:< Register/>
   },
   {
-    path:"/productex/addtocart",
+    path:"/productitem/addtocart",
     element:<ADDTOCART/>
   },
   {
     path:"/login/App",
     element:<App/>
+  },
+  {
+    path:"/empty",
+    element:<Empty/>
   }
 ]);
 
