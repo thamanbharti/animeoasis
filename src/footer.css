@@ -1,0 +1,62 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: flex-start; /* Align items at the start of the cross axis (top) */
+    height: max-content;
+    width: 100%;
+    background-color: black;
+    background-size: cover;
+    background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/11/aot-scary-titan-desktop-wallpaper-preview.jpg');
+    margin-top: 0.5cm;
+    color: white;
+}
+
+
+.contact-us,
+.policy,
+.payment,
+.social-icon,
+.icons,
+.right-reserved {
+    width: 100%; /* Each subdivision takes the full width */
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 2vh;
+}
+
+.require-contact ul li,
+.require-policy ul li,
+.require-payment ul li {
+    margin-top: 2%;
+    text-align: left;
+    margin-left: 10%;
+    font-size: large;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.social-icon {
+    font-size: large;
+    font-weight: 500;
+    color: white;
+    margin-top: 2%;
+}
+
+.icons {
+    color: white;
+    margin-top: 1%;
+}
+
+.right-reserved {
+    color: white;
+    margin-top: 2%;
+    text-align: center;
+}
+
+/* Add styles for horizontal line */
+hr {
+    border: 0.5px solid white;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}

@@ -1,0 +1,120 @@
+.edit-profile{
+    position: relative;
+    width: 60vw;
+    float: left;
+    height: 80vh;
+    border:solid;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    margin-top: 5vh;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: white;
+}
+
+#profile{
+    background-image: url('https://wallpaperaccess.com/full/2075244.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.buttons{
+    width: 6vw;
+    height: 4vh;
+    border: solid;
+    font-size: 80%;
+    color: white;
+    margin: 0 auto;
+    border-width: 1px;
+}
+.buttons:hover{
+    cursor: pointer;
+}
+.profile-photo1{
+    margin-top: 2vh;
+}
+
+.profile-photo{
+    margin-top: 5vh;
+    border-radius: 50%;
+    height: 20vh;
+    width: 10vw;
+    margin: 0 auto;
+    object-fit: cover;
+    border: solid;
+    border-width: 1px;
+}
+.details{
+     height: 2vw;
+     width: 40vw;
+     border: solid;
+     border-width:1px ;
+     margin: 0 auto;
+     border-radius: 2px;
+     margin-bottom: 2vh;
+     text-align: left;
+     padding-left: 10px;
+     padding-top: 5px;
+     color: white;
+}
+
+.ship-x{
+    height: 5vw;
+    width: 95%;
+    border: none;
+    border-width: 1px;
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    background-color:whitesmoke;
+    border-radius: 5px;
+}
+
+.ship-x li{
+    padding-top: 2px;
+    padding-left: 4px;
+    text-align: left;
+}
+
+.all-details{
+    margin-top: 20vh;
+}
+
+.history{
+    float: right;
+    margin-right: 2vw;
+    width: 20vw;
+    border: solid;
+    height: 80vh;
+    max-height: 80vh;
+    overflow-y: auto; /* Set overflow-y to 'auto' for vertical scrollbar */
+    margin-top: 5vh;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: white;
+}
+
+
+
+ li{
+    list-style-type: none;
+}
+
+/* .change-button {
+    /* margin-top: 10px;
+    cursor: pointer;
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px; */
+/* } */
+
+.edit-btn{
+    float: right;
+    margin-right: 1vw;
+}
+
+.edit-btn:hover{
+    cursor: pointer;
+}

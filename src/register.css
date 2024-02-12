@@ -1,0 +1,16 @@
+
+
+.container-right{
+    height: 90vh;
+    width: 44vw;
+    border: solid;
+    transform: translateX(2vw);
+    border-width: thin;
+    background-position-x: center;
+    background-image: url('https://worldofprintables.com/wp-content/uploads/2023/06/Manga-Girl-Anime-Wallpaper-iPhone.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    color: white;
+    margin-top: 8vh;
+}

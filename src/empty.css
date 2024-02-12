@@ -1,0 +1,13 @@
+.emptybasket{
+    background-image: url('https://images5.alphacoders.com/841/841139.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 110vh;
+    width: 100vw;
+}
+.-empty{
+      text-align: center;
+      font-weight: bold;
+      font-size: 300%;
+      translate: 0 250px;
+}

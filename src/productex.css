@@ -1,0 +1,42 @@
+
+.list{
+    list-style: none;
+    
+     border: solid;
+    border-radius: 1%;
+    border-width: thin;
+}
+
+.btn{
+    float: right;
+    margin-right: 2%;
+}
+.name{
+    font-size: larger;
+    font-size: 150%;
+    font-family: cursive;
+    width: 70vh;
+   
+}
+
+img{
+    height: 50vh;
+    width: 25vw;
+}
+
+.price{
+    
+    font-family: cursive;
+    height: 1cm;
+    width: 5cm;
+    background-color: rgba(137, 43, 226, 0.747);
+    border-radius: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: large;
+}
+  
+
+
+
+ 

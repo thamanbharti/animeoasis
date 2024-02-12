@@ -1,0 +1,144 @@
+body{
+    background-color: rgb(117, 115, 115);
+    
+}
+
+.product-box{
+    height: 35vh;
+    width: 25vw;
+    border: solid;
+    text-align: center;
+    display: inline-flex;
+    margin-left: 2cm;
+    border-width: thin;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-image: url('https://5.imimg.com/data5/SELLER/Default/2023/2/ER/NY/XZ/7633002/anime-t-shirts-500x500.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:5px ;
+}
+.product-box1{
+    height: 35vh;
+    width: 25vw;
+    border: solid;
+    text-align: center;
+    background-size: contain;
+    display: inline-flex;
+    margin-left: 2cm;
+    margin-top: .5cm;
+    border-radius:5px ;
+    border-width: thin;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    background-image: url('https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51hbg+BG0xL._AC_UF1000,1000_QL80_.jpg');
+}
+.product-box2{
+    height: 35vh;
+    width: 25vw;
+    border: solid;
+    text-align: center;
+    display: inline-flex;
+    margin-left: 2cm;
+    border-radius:5px ;
+    margin-top: .5cm;
+    border-width: thin;
+    background-size: contain;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   background-image: url('https://i.pinimg.com/736x/06/86/69/0686690bba49fdcf6d66eaf7ae9cdc23.jpg');
+}
+.product-box3{
+    height: 35vh;
+    width: 25vw;
+    border: solid;
+    text-align: center;
+    display: inline-flex;
+    margin-left: 2cm;
+    margin-top: .5cm;
+    border-radius:5px ;
+    border-width: thin;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-image: url('https://www.printninja.com/wp-content/uploads/2019/03/manga-tankoubon-graphic-novel.jpg');
+}
+.product-box4{
+    height: 35vh;
+    width: 25vw;
+    border: solid;
+    background-size: contain;
+    text-align: center;
+    display: inline-flex;
+    margin-left: 2cm;
+    margin-top: .5cm;
+    border-radius:5px ;
+    border-width: thin;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-image: url('https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61Hv5fSE+fL._AC_UF1000,1000_QL80_.jpg');
+}
+.product-box5{
+    height: 35vh;
+    width: 25vw;
+    border: solid;
+    text-align: center;
+    display: inline-flex;
+    margin-left: 2cm;
+    margin-top: .5cm;
+    border-radius:5px ;
+    border-width: thin;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-image: url('https://img.thesitebase.net/10271/10271269/products/ver_13d5765964b99cd6d7a03a1ea29606287/0x900@1678166012ce6714d89f.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.Logout{
+    border: none;
+    text-align: center;
+    margin-left: 50%;
+    height: max-content;
+    width: 6vw;
+    border-radius: 4%;
+    background-color: rgb(247, 247, 247);
+    font-family: cursive;
+    padding: 0.01%;
+    font-size: large;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    overflow: hidden;
+}
+.logout-section :hover{
+    background-color: rgb(220, 226, 230);
+    cursor:pointer;
+}
+
+@keyframes enlarge {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.product-box:hover{
+    animation: enlarge 1s 1 ;
+    cursor: pointer;
+}
+.product-box1:hover{
+    animation: enlarge 1s 1 ;
+    cursor: pointer;
+}
+.product-box2:hover{
+    animation: enlarge 1s 1 ;
+    cursor: pointer;
+}
+.product-box3:hover{
+    animation: enlarge 1s 1 ;
+    cursor: pointer;
+}
+.product-box4:hover{
+    animation: enlarge 1s 1 ;
+    cursor: pointer;
+}
+.product-box5:hover{
+    animation: enlarge 1s 1 ;
+    cursor: pointer;
+}

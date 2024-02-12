@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.webname {
+    text-align: center;
+    font-family: cursive;
+    background-color: black;
+    height: 1.2cm;
+}
+
+ h1{
+    color: white;
+    
+}
+
+.webname h21{
+    font-weight: lighter;
+    font-family: cursive;
+}
+.navbar{
+    font-weight: 600;
+}
+.navbar ul{
+    display: inline-flex;
+    list-style: none;
+}
+
+.navbar ul li{
+    width: 100px;
+    margin: 15px;
+    padding: 15px;
+   
+ height: .5cm;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.active,.navbar ul li:hover{
+    border-radius: 3px;
+    background-color: rgb(252, 252, 252);
+}
+
+.sub-menu-1{
+    display: none;
+}
+
+.navbar ul li:hover .sub-menu-1{
+    display: block;
+   
+    position: absolute;
+    background-color: rgb(254, 253, 255);
+    margin-top: 15px;
+  
+}
+
+.navbar ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding:10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius:0;
+    text-align: left;
+}
+
+/* .sub-menu-1 ul li:hover{
+    background-color: rgb(254, 253, 255);
+} */
+
+.sub-menu-1 ul li:nth-child(1),.sub-menu-1 ul li:nth-child(2),.sub-menu-1 ul li:nth-child(3),
+.sub-menu-1 ul li:nth-child(4),.sub-menu-1 ul li:nth-child(5),.sub-menu-1 ul li:nth-child(6),.sub-menu-1 ul li:nth-child(7):hover{
+   
+    cursor: pointer;
+}
+
+.navbar ul li:hover .sub-menu-1 ul{
+   display: block;
+   margin: 10px;
+}
+
+.navbar ul li:hover .sub-menu-1,ul li:last-child{
+      display: block;
+      margin: 10px;
+    
+}
+
+
+
+
+.login-nav:hover{
+    cursor: pointer;
+}
+
+.crnt-num{
+   
+    color:red;
+    font-size: larger;
+   
+    border-radius: 100%;
+}
+.cartbtn:hover{
+    cursor: pointer;
+}
