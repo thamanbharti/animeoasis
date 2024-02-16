@@ -1,14 +1,17 @@
 
 import './App.css';
 import { useState,useEffect } from 'react';
+import Main from './main';
 import Navbar from './navbar';
 import Product from './productcard';
+import { ContextProvider } from './CONTEXT.JS';
 import Footer from './footer';
 import Login from './login';
 import ADDTOCART from './addtocart';
 import Productex from './productex';
 import Register from './register';
 import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
+import Profile from './profile';
 
 function App({number}) {
   
@@ -18,10 +21,12 @@ function App({number}) {
   return (
    <> 
    <div className='App'>
-   <Navbar  number={number}/>
+   {/* <Navbar  number={number}/>
    <Product/>
-   <Footer/> 
-
+   <Footer/>  */}
+   
+   <Main/>
+  
       
     
   

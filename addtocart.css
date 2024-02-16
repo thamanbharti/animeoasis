@@ -3,6 +3,13 @@
   flex-wrap: wrap;
   gap: 10px; /* Set the gap between the boxes */
   justify-content: flex-start; /* Adjust as needed (e.g., center, space-between) */
+  height: 80vh;
+}
+
+.basket-container{
+  height: 110vh;
+  background-size: cover;
+  background-image: url('https://cdn.wallpapersafari.com/68/11/t9vZSU.jpg');
 }
 
 .box {
@@ -14,16 +21,18 @@
   flex-direction: column; /* Display child elements in a column */
   align-items: center; /* Center the child elements horizontally */
   padding: 10px;
+  height: 50vh;
+  border-radius: 5px;
   translate: 10px 5px;
 }
 
-.name {
-  font-size: 18px;
+.itemname {
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-.price {
+.itemprice {
   font-size: 16px;
   color: white; /* Add a color for the price or adjust as needed */
   margin-bottom: 5px;
@@ -31,7 +40,7 @@
   text-align: center;
 }
 
-.image {
+.Image {
   width: 150px;
   height: 200px;
   object-fit: cover;
@@ -55,4 +64,10 @@
   padding: 10px;
   border-top: 1px solid #ccc;
   background-color: #f0f0f0;
+}
+
+.delete
+:hover{
+  cursor: pointer;
+  color: rgb(165, 16, 16);
 }

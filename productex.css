@@ -13,10 +13,15 @@
 }
 .name{
     font-size: larger;
-    font-size: 200%;
+    font-size: 150%;
     font-family: cursive;
     width: 70vh;
    
+}
+
+img{
+    height: 50vh;
+    width: 25vw;
 }
 
 .price{

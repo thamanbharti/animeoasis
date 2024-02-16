@@ -1,0 +1,50 @@
+.bar {
+    width: 30vw;
+    height: 10vh;
+    border: solid;
+    margin-right: 2px;
+    z-index: 1;
+    border-width: 1px;
+    border-radius: 5px;
+    animation: reveal 0.5s 1; /* Corrected iteration count */
+    /* display:none; */
+    
+    background-color: white;
+    border-color: violet;
+    float: right;
+}
+
+.line {
+    margin-top: 2px;
+    margin-left: 5px;
+    animation: move 2s infinite; /* Corrected iteration count */
+    width: 97%;
+    border-bottom: solid 2px black;
+}
+
+@keyframes move {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 98%;
+    }
+}
+.text{
+    /* margin-top: 7%; */
+    float: left;
+    font-size: larger;
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@keyframes reveal {
+    0% {
+       
+        height: 0vh;
+    }
+  100% {
+        height: 10vh;
+    }
+   
+}

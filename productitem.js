@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Login from './login';
+import Empty from './empty';
+import { IoPersonOutline } from "react-icons/io5";
 import Footer from './footer';
 import './productex.css';
 import { BsCartFill } from 'react-icons/bs';
@@ -8,21 +10,62 @@ import { GiPriceTag } from 'react-icons/gi';
 import { IoLogIn } from "react-icons/io5";
 import Popup from 'reactjs-popup';
 import Data from "./data";
+import shoesData from './shoes';
+import AccessoriesData from './access';
+import comicsData from './comics';
+import hardwareData from './hardware';
+import sketchBookData from './sketchbook';
 import axios from "axios";
 
 function Productitem() {
+  const location=useLocation();
+ const shipped=false;
+ const Navigate=useNavigate();
+  const userData=location.state?.userData;
+  
+  const item=location.state?.item;
+  const userId=userData._id;
   const [number, setNum] = useState(0);
   const [basket, addtocart] = useState([]);
-  const [isButtonPressed, setIsButtonPressed] = useState({});
+  // const [isButtonPressed, setIsButtonPressed] = useState({});
   const [animename, animenameSet] = useState('Naruto');
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   
-
-
+  
+   
   const history = useNavigate();
+  let Dataname;
+   
   
-
+    if(item==="merchandise")
+    {
+      Dataname=Data;
+      console.log(Data)
+    }
+    else if(item==="comics")
+    {
+      Dataname=comicsData
+    }
+    else if(item==="accessories")
+    {
+      Dataname=AccessoriesData;
+    }
+    else if(item==="shoes")
+    {
+      Dataname=shoesData;
+      console.log(shoesData)
+    }
+    else if(item==="sketchbook")
+    {
+      Dataname=sketchBookData; 
+    }
+    else if(item==="hardware")
+    {
+      Dataname=hardwareData;
+    }
   
+  
+  console.log(item)
   const handleClick = () => {
     setShowLoginPopup(true);
   }
@@ -30,49 +73,32 @@ function Productitem() {
   const handleClosePopup = () => {
     setShowLoginPopup(false);
   }
-
-  const setmyBasket = (product) => {
-    addtocart((prevBasket) => [...prevBasket, product])
-    setNum(number+1)
-    setIsButtonPressed((prevstateofbtn) => ({
-      ...prevstateofbtn,
-      [product.id]: true,
-    }));
+   
+ 
+ 
+  const addToBasketAndPost = ({name,_id,price,image,shipped }) => {
+    const cartItem = {name,_id,price,image,userId,item,shipped};
+    axios.post('http://localhost:3001/addtocart',cartItem)
+    .then(()=>{
+      console.log("success");
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+    addtocart(prevcart => [...prevcart, cartItem]);
+    
   };
-
-  useEffect(() => {
-    const cartCount = localStorage.getItem('number');
-    if (cartCount) {
-      setNum(parseInt(cartCount));
-    }
-  }, []);
-  
   
 
-  const addToBasketAndPost = (product) => {
-    setmyBasket(product);
-    alert("Added to cart");
-
-    // Send the product to the server
-    const url = 'http://localhost:3001/addtocart';
-    axios.post(url, product)
-      .then(response => {
-        // Handle successful response
-        console.log('Response:', response.data);
-      })
-      .catch(error => {
-        // Handle error
-        console.error('Error:', error.message);
-      });
-  };
+ 
 
   
 
-  const Productdata = ({ id, name, price, image }) => {
-    const isProductButtonPressed = isButtonPressed[id];
+  const Productdata = ({ _id, name, price, image,userId }) => {
+    // const isProductButtonPressed = isButtonPressed[id];
 
     return (
-      <li className="list" key={id}>
+      <li className="list" key={_id}>
         <div className="name">
           &nbsp;&nbsp;{name}{' '}
           <span className="price">
@@ -83,8 +109,8 @@ function Productitem() {
         <img alt={`cover of ${name}`} src={image} width={400} />
         <button
           className="btn"
-          onClick={() => addToBasketAndPost({ id, name, price, image })}
-          disabled={isProductButtonPressed}
+          onClick={() => addToBasketAndPost({ _id, name, price, image,shipped})}
+          // disabled={isProductButtonPressed}
         >
           <BsCartFill size={21} color="black" />
         </button>
@@ -95,11 +121,13 @@ function Productitem() {
 
   return (
     <>
-      <div className='webname'><h1> Anime<h21>-oasis</h21> </h1></div>
+      <div className='webname'><h1> Anime<h21>-oasis</h21> </h1> </div>
+     
       <div className='navbar'>
         <ul>
-          <li className='active' onClick={() => { history('/') }}><a href='#'>Home</a></li>
-          <li><a href='#'>Anime</a>
+        
+          <li className='active' onClick={() => { history('/') }}>Home</li>
+          <li>Anime
             <div className='sub-menu-1'>
               <ul>
                 <li onClick={() => { animenameSet('Naruto') }}>Naruto</li>
@@ -113,26 +141,25 @@ function Productitem() {
 
           <div className='logo-sec'>
             <ul>
-              <li className='cartbtn' onClick={() => { history('/addtocart') }}>
-                <BsCartFill size={21} />
-                <span className='crnt-num'>{number}</span>
+              <li className='cartbtn' onClick={() => { history('/addtocart',{state:{userId:userId}}) }}>
+                <BsCartFill size={22} />
+                
               </li>
-              <li className='login-nav' onClick={handleClick}>
-                login<IoLogIn size={25} />
-              </li>
+             
             </ul>
           </div>
         </ul>
       </div>
 
-      {/* The login popup */}
-      <Popup open={showLoginPopup} onClose={handleClosePopup} modal nested contentStyle={{ alignItems: 'center', justifyContent: 'center' }} >
-        <Login />
-      </Popup>
-      <br />
       
-      {Data[animename].map(product => (
-         <Productdata key={product.id} {...product} />
+      {/* <Popup open={showLoginPopup} onClose={handleClosePopup} modal nested contentStyle={{ alignItems: 'center', justifyContent: 'center' }} >
+        <Login />
+      </Popup> */}
+      <br />
+      {
+      
+        Dataname[animename].map(product => (
+         <Productdata key={product._id} {...product} userId={userId}/>
 ))}
 
       <Footer />

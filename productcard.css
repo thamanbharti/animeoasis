@@ -12,21 +12,24 @@ body{
     margin-left: 2cm;
     border-width: thin;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-image: url('https://cdnb.artstation.com/p/assets/images/images/039/881/373/large/paradoxicalbean-mockap-kimetsu-blanca-trasera.jpg?1627232005');
+    background-image: url('https://5.imimg.com/data5/SELLER/Default/2023/2/ER/NY/XZ/7633002/anime-t-shirts-500x500.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius:5px ;
 }
 .product-box1{
     height: 35vh;
     width: 25vw;
     border: solid;
     text-align: center;
+    background-size: contain;
     display: inline-flex;
     margin-left: 2cm;
     margin-top: .5cm;
+    border-radius:5px ;
     border-width: thin;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-    background-image: url('https://i5.walmartimages.com/asr/70f1aa2c-6020-446f-ac5f-7fed81cd20c2.412c183fbb0609f4f24eb6668df987d8.jpeg?odnHeight=320&odnWidth=320&odnBg=FFFFFF');
+    background-image: url('https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51hbg+BG0xL._AC_UF1000,1000_QL80_.jpg');
 }
 .product-box2{
     height: 35vh;
@@ -35,10 +38,12 @@ body{
     text-align: center;
     display: inline-flex;
     margin-left: 2cm;
+    border-radius:5px ;
     margin-top: .5cm;
     border-width: thin;
+    background-size: contain;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/a5f563108424871.Y3JvcCwyNzYxLDIxNjAsNTQwLDA.png');
+   background-image: url('https://i.pinimg.com/736x/06/86/69/0686690bba49fdcf6d66eaf7ae9cdc23.jpg');
 }
 .product-box3{
     height: 35vh;
@@ -48,6 +53,7 @@ body{
     display: inline-flex;
     margin-left: 2cm;
     margin-top: .5cm;
+    border-radius:5px ;
     border-width: thin;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-image: url('https://www.printninja.com/wp-content/uploads/2019/03/manga-tankoubon-graphic-novel.jpg');
@@ -56,13 +62,15 @@ body{
     height: 35vh;
     width: 25vw;
     border: solid;
+    background-size: contain;
     text-align: center;
     display: inline-flex;
     margin-left: 2cm;
     margin-top: .5cm;
+    border-radius:5px ;
     border-width: thin;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-image: url('https://graphicburger.com/wp-content/uploads/2014/01/Sketchbook-MockUp-300.jpg');
+    background-image: url('https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61Hv5fSE+fL._AC_UF1000,1000_QL80_.jpg');
 }
 .product-box5{
     height: 35vh;
@@ -72,9 +80,10 @@ body{
     display: inline-flex;
     margin-left: 2cm;
     margin-top: .5cm;
+    border-radius:5px ;
     border-width: thin;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-image: url('https://i.etsystatic.com/36861249/r/il/03c7ed/4190677549/il_fullxfull.4190677549_rq2k.jpg');
+    background-image: url('https://img.thesitebase.net/10271/10271269/products/ver_13d5765964b99cd6d7a03a1ea29606287/0x900@1678166012ce6714d89f.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -98,4 +107,38 @@ body{
 .logout-section :hover{
     background-color: rgb(220, 226, 230);
     cursor:pointer;
+}
+
+@keyframes enlarge {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.product-box:hover{
+    animation: enlarge 1s 1 ;
+    cursor: pointer;
+}
+.product-box1:hover{
+    animation: enlarge 1s 1 ;
+    cursor: pointer;
+}
+.product-box2:hover{
+    animation: enlarge 1s 1 ;
+    cursor: pointer;
+}
+.product-box3:hover{
+    animation: enlarge 1s 1 ;
+    cursor: pointer;
+}
+.product-box4:hover{
+    animation: enlarge 1s 1 ;
+    cursor: pointer;
+}
+.product-box5:hover{
+    animation: enlarge 1s 1 ;
+    cursor: pointer;
 }

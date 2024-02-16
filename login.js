@@ -2,7 +2,6 @@ import React  from "react";
 import './login.css';
 import './App.css';
 import { Link, useNavigate } from "react-router-dom";
-import Register from "./register";
 import { useState } from "react";
 import axios from "axios";
 
@@ -10,7 +9,8 @@ import axios from "axios";
 const Login=({isShowlogin},{setLoginUser})=>
 {
     const Navigate=useNavigate()
-    const [show,Display]=useState(isShowlogin)
+    
+    const [show,Display]=useState(0)
     const [user,setUser]=useState({
        
         email:"",
@@ -26,18 +26,32 @@ const Login=({isShowlogin},{setLoginUser})=>
             [name]:value   /// these line helps to in which input field i am working keep that thing  value in
                             /// its name
         })
-        console.log(name,value)
+        // console.log(name,value)
     }
     
    
 
     const login = () => {
+
+        if(user.email===""){
+           alert("Email Required")
+        }
         axios.post("http://localhost:3001/login", user)
         .then(res => {
-            alert(res.data.message)
+           
+            console.log(res.data.user)
+            
+            if(res.data.message==='Login successful')
+            {
             setUser(res.data.user)
-            Display(!show)
-            Navigate(-1)
+
+                Navigate('/productcard',{state:{userData:res.data.user}});
+
+            }
+            else if(user.email!=""||user.passwrd!=""){
+                
+               show=1;
+            }
         })
     }
     return(
@@ -46,14 +60,12 @@ const Login=({isShowlogin},{setLoginUser})=>
       
          {console.log("user",user)}
           <div className="container-right"><div className="profile"><b >Sign In</b></div>
-          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don't have account?<Link to="./register">Signup</Link></h3>
+          <h3>Don't have account?<Link to="./register">Signup</Link></h3>
         
           <input type="text"  name='email' value={user.email} placeholder="Your Email " onChange={handleChange} className="user" />
         
           <input type="password" name="passwrd" value={user.passwrd} onChange={handleChange} placeholder="Password" className="pwd"/>
-          <div className="fgt-pwd"><a href="#">forget your password?</a></div>
+          {show===true?<div className="fgt-pwd" style={{color:'white',fontWeight:'bold'}}>Signup first or password must be wrong</div>:<div style={{color:'white',fontWeight:'bold'}}>Fill all required fields</div>}
           <div className="login" onClick={login}><b>Login</b></div>
           </div>
          
